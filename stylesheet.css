@@ -3,6 +3,9 @@ span{
 }
 
 .page {
+  margin: 0px;
+  border: none;
+  padding: 0px;
   display: grid;
   min-height: 100vh;
 }
