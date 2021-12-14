@@ -2,10 +2,16 @@ span{
   font-family: 'Great Vibes', cursive;
 }
 
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 .text_principal {
   display: flex;
   justify-content: center;
   justify-items: center;
   align-items: center;
-  background-color: dimgrey;
+  background-color: rgb(101, 182, 230);
 }
