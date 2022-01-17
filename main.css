@@ -10,6 +10,7 @@
   scroll-behavior: smooth;
 }
 
+/*--- Reset CSS ---*/
 * {
   padding: 0px;
   margin: 0px;
@@ -17,6 +18,7 @@
   box-sizing: border-box;
   text-align: center;
 }
+
 a{
   text-decoration: none;
 }
@@ -53,6 +55,15 @@ span{
 
 #main, #skills, #contact {
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+
 }
 
 nav {
