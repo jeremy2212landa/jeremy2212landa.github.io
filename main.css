@@ -1,0 +1,57 @@
+:root{
+  /*--- Letra ---*/
+  --font-main: 'Cascadia Code';
+  --font-color: #EACEFF;
+
+  /*--- Colores ---*/
+  --c-primary: #2A3775;
+  --c-secundary: #f5f5f5;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+html {
+  font-family: var(--font-main);
+  color: var(--font-color);
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  background-color: #2A3775;
+}
+
+span{
+  font-family: 'Great Vibes', cursive;
+}
+
+.title {
+  font-size: 2em;
+  display: block;
+  text-align: center;
+}
+
+header {
+  display: block;
+  background-color: var(--c-secundary);
+  color: var(--c-primary);
+  height: 6vh;
+}
+
+#main, #skills {
+  height: 100vh;
+}
+
+nav {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
