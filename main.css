@@ -2,6 +2,7 @@
   /*--- Letra ---*/
   --font-main: 'Cascadia Code';
   --font-color: #EACEFF;
+  --font-size: 16px;
 
   /*--- Colores ---*/
   --c-primary: #2A3775;
@@ -22,6 +23,7 @@ a{
 
 html {
   font-family: var(--font-main);
+  font-size: var(--font-size);
   color: var(--font-color);
 }
 
