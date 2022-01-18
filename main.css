@@ -23,6 +23,11 @@ a{
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+
+}
+
 html {
   font-family: var(--font-main);
   font-size: var(--font-size);
@@ -50,12 +55,10 @@ span{
   width: 100%;
   background-color: var(--c-secundary);
   color: var(--c-primary);
-  height: 6vh;
 }
 
 #main, #skills, #contact {
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,7 +66,7 @@ span{
 }
 
 #main {
-
+  background-color: #000;
 }
 
 nav {
@@ -72,4 +75,9 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   align-content: center;
+}
+
+.princ {
+  display: flex;
+  width: 3.2em;
 }
