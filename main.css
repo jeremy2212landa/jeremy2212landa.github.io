@@ -75,7 +75,6 @@ html {
 }
 
 body {
-  display: grid;
   min-height: 100vh;
   background-color: #2A3775;
   overflow-x: hidden;
@@ -130,17 +129,25 @@ span{
 
 .home{
   min-height: 100vh;
+  width: 100%;
   background-color: #0f0f0f;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  min-width: auto;
 }
 
 .hero h1 {
+  display: inline-block;
   font-size: 7.7vw;
 }
 
 .hero h5 {
+  display: inline-block;
   font-size: 3vw;
 }
 
