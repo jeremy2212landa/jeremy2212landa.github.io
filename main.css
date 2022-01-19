@@ -8,6 +8,8 @@
   --c-primary: #2A3775;
   --c-secundary: #f5f5f5;
   scroll-behavior: smooth;
+
+  --max-width: 1200px;
 }
 
 /*--- Reset CSS ---*/
@@ -19,13 +21,20 @@
   text-align: center;
 }
 
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+
 a{
   text-decoration: none;
+  color: var(--c-primary);
 }
 
 img {
-  width: 100%;
-
+  min-width: 100%;
+  height: auto;
 }
 
 html {
@@ -46,12 +55,12 @@ span{
 }
 
 .title {
-  font-size: 3em;
+  font-size: 7vw;
   display: block;
   text-align: center;
 }
 
-#nav {
+header {
   width: 100%;
   background-color: var(--c-secundary);
   color: var(--c-primary);
@@ -66,18 +75,30 @@ span{
 }
 
 #main {
-  background-color: #000;
+  background-color: #0f0f0f;
 }
 
-nav {
+.nav {
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-content: center;
 }
+.nave  {
+  display: flex;
+  flex: row;
+  align-items: center;
+}
+.nave a{
+  padding: 0 1rem;
+}
 
 .princ {
   display: flex;
   width: 3.2em;
+}
+
+.container {
+  max-width: var(--max-width);
 }
