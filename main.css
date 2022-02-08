@@ -1,15 +1,18 @@
 :root{
-  /*--- Letra ---*/
-  --font-main: 'Cascadia Code';
-  --font-color: #EACEFF;
-  --font-size: 16px;
 
-  /*--- Colores ---*/
-  --c-primary: #2A3775;
-  --c-secundary: #f5f5f5;
   scroll-behavior: smooth;
-
   --max-width: 1200px;
+  /*--- Font ---*/
+  --font-size: 16px;
+  --font-style-main: '';
+  --font-style-secundary: '';
+  --font-color-primary: '';
+  --font-color-secundary: '';
+  /*--- Colores ---*/
+  --color-base: #ddd;
+  --color-primary: #0f0f0f;
+  --color-secundary: blue;
+
 }
 
 /*---******* Reset CSS *******---*/
@@ -28,9 +31,21 @@
   box-sizing: inherit;
 }
 
+html {
+  font-family: var(--font-style-main);
+  font-size: var(--font-size);
+  color: var(--font-color-primary);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-base);
+  overflow-x: hidden;
+}
+
 a{
   text-decoration: none;
-  color: var(--c-primary);
+  color: var(--color-primary);
 }
 
 h1 {
@@ -68,110 +83,78 @@ img {
   height: auto;
 }
 
-html {
-  font-family: var(--font-main);
-  font-size: var(--font-size);
-  color: var(--font-color);
-}
-
-body {
-  min-height: 100vh;
-  background-color: #2A3775;
-  overflow-x: hidden;
-}
-
 span{
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Rubik', sans-serif;
 }
 
-/*---******* Inicio de las cosas *******---*/
+/*---******* Components *******---*/
 
-
-/*---******* Menu de navegacion *******---*/
-
-.header {
+/*---******* Header *******---*/
+.header{
   width: 100%;
-  height: 3rem;
-  background-color: var(--c-secundary);
-  color: var(--c-primary);
+  height: 4rem;
+  background-color: var(--color-primary);
 }
 
-.container-header {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 2rem;
+.container-header{
+  max-width: var(--max-width)
+  height: 4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 0px 2rem;
 }
 
-.navigation {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.img-nav{
+  padding: .3rem;
+  width: 3rem;
 }
 
-.navigation a {
-  font-size: 1.2rem;
-  padding: .9rem 1rem;
+.menu-ham{
+  padding: 1rem;
+  background-color: var(--color-secundary);
+  color: white;
+  font-style: bold;
 }
 
-.navigation a:last-child{
-  padding-right: 0;
+
+@media screen and (max-width: 720px) {
+
 }
 
-.img-nav img{
-  width: 2.4rem;
-}
+/**---******* MAIN *******---**/
 
-/*---******* Home *******---*/
-.home {
-  background-color: #0f0f0f;
-}
-.home,
-.home ~ section{
+main{
   min-height: 100vh;
-  width: 100%;
+}
+
+main > h1, main > h3 {
+  margin: auto;
+  text-align: center;
+}
+
+.hero{
+  min-height: 100vh;
+  max-width: var(--max-width);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-.hero h1 {
-  display: inline-block;
-  font-size: 7.7vw;
-}
-
-.hero h5 {
-  display: inline-block;
-  font-size: 3vw;
-}
-
-/*---******* About *******---*/
-
-.about {
+.skills{
   min-height: 100vh;
 }
 
-/*---******* Skills *******---*/
-
-.skills {
-  min-height: 100vh;
+.cards-skill{
+    background-color: var(--color-secundary);
+    border-radius: 15px;
+    color: white;
+    margin: 2rem 1rem;
 }
 
-/*---******* Works *******---*/
 
-.works {
-  min-height: 100vh;
-}
-
-/*---******* Contact *******---*/
-
-.contact {
-  min-height: 100vh;
-}
 
 /*---******* Footer *******---*/
 
