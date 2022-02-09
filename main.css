@@ -87,6 +87,7 @@ span{
   font-family: 'Rubik', sans-serif;
 }
 
+
 /*---******* Components *******---*/
 
 /*---******* Header *******---*/
@@ -148,6 +149,34 @@ span{
   margin-bottom: 0px;
 }
 
+.menucontent{
+  display: none;
+}
+
+.active{
+  position: absolute;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  top:4rem;
+  right: 0;
+  color: #fff;
+}
+.active a{
+  display: block;
+  font-size: 2rem;
+  padding: 1.5rem 0px;
+  color: #fff;
+}
+.active a:hover{
+  color: tomato;
+}
+
+.menucontent-active{
+  display: block;
+}
+
 
 
 @media screen and (max-width: 720px) {
@@ -166,6 +195,7 @@ main > h1, main > h3 {
 }
 
 .hero{
+  margin: auto;
   min-height: 100vh;
   max-width: var(--max-width);
   display: flex;
@@ -173,6 +203,35 @@ main > h1, main > h3 {
   justify-content: center;
   align-items: center;
 }
+
+.canvas {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2256cb;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  z-index: -1;
+}
+
+/*.canvas::after{
+  content: "";
+  width: 1rem;
+  height: 2.5rem;
+  background-color: #1fc700;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 9rem;
+  left: 9rem;
+  z-index: 1;
+}
+*/
+
+
+
+
+
+
 
 .skills{
   margin-bottom: 3rem;
