@@ -83,6 +83,10 @@ img {
   height: auto;
 }
 
+ul{
+  list-style: none;
+}
+
 span{
   font-family: 'Rubik', sans-serif;
 }
@@ -204,14 +208,62 @@ main > h1, main > h3 {
   align-items: center;
 }
 
-.canvas {
+/*.canvas {
   width: 100vw;
   height: 100vh;
-  background-color: #2256cb;
-  position: absolute;
+  background-color: transparent;/*#2256cb;*/
+  /*position: absolute;
   top: 4rem;
   left: 0;
   z-index: -1;
+}*/
+
+#pattern {
+	display: block;
+  position: relative;
+  z-index: -2;
+}
+
+.herotittle{
+  color: white;
+  margin: auto;
+  margin-top: 50vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+
+h1{
+  font-size: 7vw;
+}
+
+.herosub{
+  font-size: 5vw;
+}
+
+.tittleSpan{
+  display: inline-block;
+
+  white-space: nowrap;
+  border-right: 2px solid;
+  padding-right: 4px;
+  width: 12ch;
+
+  animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from { width: 0 }
+}
+
+@keyframes blink {
+  50 { border-color: transparent }
 }
 
 /*.canvas::after{
@@ -234,10 +286,19 @@ main > h1, main > h3 {
 
 
 .skills{
-  margin-bottom: 3rem;
+  margin: auto auto 3rem auto;
+
+}
+@media screen and (min-width: 720px) {
+  .skills{
+    max-width: var(--max-width);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .cards-skill{
+    max-width: 35rem;
     margin: 1.7rem 1.5rem;
     padding: 1rem 0px;
     background-color: var(--color-secundary);
