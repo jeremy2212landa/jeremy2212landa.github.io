@@ -1,9 +1,18 @@
 export function Hero(){
 
-  const $hero = document.createElement('section');
+  const $section = document.createElement('section'),
+  $hero = document.createElement('div');
+  $section.classList.add('hm');
   $hero.setAttribute('id', 'home');
   $hero.classList.add('hero');
-  $hero.innerHTML = '<canvas id="pattern" class="canvas"> </canvas><div class="herotittle"><h1>\{ <span class="tittleSpan">Jeremy Landa</span> \}</h1><h3 class="herosub">Desarrollador \/ Cybersecurity</h3></div>';
+  $hero.innerHTML += `
+  <canvas id="pattern" class="canvas"></canvas>
+  <div class="herotittle">
+    <h1>{ <span class="tittleSpan">Jeremy Landa</span> }</h1>
+    <h3 class="herosub">Desarrollador \/ Cybersecurity</h3>
+  </div>`;
+
+  $section.appendChild($hero);
 
 
   //Matrix/////////////////////
@@ -52,5 +61,5 @@ const handleResize = () => {
 
 window.addEventListener("resize", handleResize);
 */
-  return $hero;
+  return $section;
 }

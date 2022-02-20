@@ -198,6 +198,10 @@ main > h1, main > h3 {
   text-align: center;
 }
 
+.hm {
+  background-color: #2256cb;
+}
+
 .hero{
   margin: auto;
   min-height: 100vh;
@@ -206,7 +210,7 @@ main > h1, main > h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #2256cb;
+  /*background-color: #2256cb;*/
 }
 
 /*.canvas {
