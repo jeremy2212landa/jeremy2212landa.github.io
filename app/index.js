@@ -1,4 +1,6 @@
-console.log("Hola como Estamos");
+import {App} from "./App.js";
+
+console.log(App());
 
 let mainevent = document.getElementById('logo');
 
