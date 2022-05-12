@@ -26,5 +26,7 @@ export function Navigation() {
     window.location.href = "./#home";
   });
 
+
+
   return $nav;
 }

@@ -9,7 +9,7 @@ export function Hero(){
   <canvas id="pattern" class="canvas"></canvas>
   <div class="herotittle">
     <h1>{ <span class="tittleSpan">Jeremy Landa</span> }</h1>
-    <h3 class="herosub">Desarrollador \/ Cybersecurity</h3>
+    <h3 class="herosub">Desarrollador / Cybersecurity</h3>
   </div>`;
 
   $section.appendChild($hero);

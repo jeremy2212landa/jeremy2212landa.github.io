@@ -1,6 +1,10 @@
 :root{
 
   scroll-behavior: smooth;
+background: #BF43FB;
+background: -moz-radial-gradient(center, #BF43FB 0%, #492274 100%);
+background: -webkit-radial-gradient(center, #BF43FB 0%, #492274 100%);
+background: radial-gradient(ellipse at center, #BF43FB 0%, #492274 100%);
   --max-width: 1200px;
   /*--- Font ---*/
   --font-size: 16px;
