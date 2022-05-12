@@ -1,7 +1,12 @@
 export function Hero(){
 
-  const $section = document.createElement('section'), $hero = document.createElement('div');
-  
+  const $section = document.createElement('section'), $hero = document.createElement('div'), $logo = document.createElement('img');
+
+  $logo.setAttribute('src', './app/assets/landat.svg');
+  $logo.setAttribute('alt', 'logo');
+  $logo.classList.add('logo-landa');
+  $section.appendChild($logo);
+
   $section.setAttribute('id', 'home');
 
   $hero.classList.add('hero');

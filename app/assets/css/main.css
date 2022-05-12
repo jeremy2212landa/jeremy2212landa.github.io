@@ -105,6 +105,7 @@ section {
 
 /*---******* Hero *******---*/
 #home{
+  position: relative;
   margin: auto;
   display: flex;
   height: 100vh;
@@ -113,6 +114,14 @@ section {
   align-items: center;
   justify-content: center;
 }
+
+.logo-landa {
+  position: absolute;
+  width: 3rem;
+  top: 0.5rem;
+  left: 1.2rem;
+}
+
 .text-tittle{
   font-family: 'Koulen', cursive;
   font-size: 10vw;
@@ -121,6 +130,12 @@ section {
   background-clip: text;
   -webkit-background-clip: text;
 }
+.text-tittle :hover{
+  background-image: linear-gradient(to left, #ef1062, #7c23ea);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
 
 .tittle-subtext {
   font-size: 3vw;
