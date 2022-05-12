@@ -1,15 +1,15 @@
-import {Header} from "./components/header.js";
+//import {Header} from "./components/header.js";
 import {Hero} from "./components/hero.js";
-import {Skills} from "./components/skills.js"
+//import {Skills} from "./components/skills.js"
 import {Footer} from "./components/footer.js"
 
   const $root = document.getElementById('root');
 
 export function App () {
 
-    $root.appendChild(Header());
+    //$root.appendChild(Header());
     $root.appendChild(Hero());
-    $root.appendChild(Skills());
+    //$root.appendChild(Skills());
     $root.appendChild(Footer());
 
 }

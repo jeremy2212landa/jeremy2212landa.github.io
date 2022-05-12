@@ -1,26 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Rubik&display=swap');
+
+
 :root{
 
   scroll-behavior: smooth;
-background: #BF43FB;
-background: -moz-radial-gradient(center, #BF43FB 0%, #492274 100%);
-background: -webkit-radial-gradient(center, #BF43FB 0%, #492274 100%);
-background: radial-gradient(ellipse at center, #BF43FB 0%, #492274 100%);
   --max-width: 1200px;
+  
+  /*--- Colores ---*/
+  --color-base: #FFF3E0; /*Background color*/
+  --color-primary: #4d340c ;
+  --color-secundary: #1445cc;
+
+
   /*--- Font ---*/
   --font-size: 16px;
-  --font-style-main: '';
-  --font-style-secundary: '';
-  --font-color-primary: '';
-  --font-color-secundary: '';
-  /*--- Colores ---*/
-  --color-base: #ddd;
-  --color-primary: #0f0f0f;
-  --color-secundary: #2256cb;
+  --font-style-main: 'Koulen', cursive;
+  --font-style-secundary: 'Rubik', sans-serif;
 
 }
 
-/*---******* Reset CSS *******---*/
 
+
+/*---******* Reset CSS *******---*/
 * {
   padding: 0px;
   margin: 0px;
@@ -38,7 +40,7 @@ background: radial-gradient(ellipse at center, #BF43FB 0%, #492274 100%);
 html {
   font-family: var(--font-style-main);
   font-size: var(--font-size);
-  color: var(--font-color-primary);
+  color: var(--color-primary);
 }
 
 body {
@@ -91,236 +93,38 @@ ul{
   list-style: none;
 }
 
-span{
-  font-family: 'Rubik', sans-serif;
+section {
+  min-height: 100vh;
 }
+
+/*---******* Reset CSS *******---*/
+
 
 
 /*---******* Components *******---*/
 
-/*---******* Header *******---*/
-.header{
-  width: 100%;
-  height: 4rem;
-  background-color: var(--color-primary);
-}
-
-.container-header{
-  max-width: var(--max-width)
-  height: 4rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 2rem;
-}
-
-.img-nav{
-  padding: .3rem;
-  width: 3rem;
-}
-
-/* .menu-ham{
-  padding: 1rem;
-  background-color: var(--color-secundary);
-  color: white;
-  font-style: bold;
-} */
-
-.menu-ham{
-  background-color: inherit;
-}
-
-.menutoggle{
-  padding: .6rem;
-  background-color: var(--color-secundary);
-  display: block;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  border-radius: 3px;
-}
-
-.menutoggle span{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background:  #cdcdcd;
-  border-radius: 3px;
-  z-index: 1;
-
-}
-
-.menutoggle span:nth-last-child(1){
-  margin-bottom: 0px;
-}
-
-.menucontent{
-  display: none;
-}
-
-.active{
-  position: absolute;
-  background-color: var(--color-primary);
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  top:4rem;
-  right: 0;
-  color: #fff;
-}
-.active a{
-  display: block;
-  font-size: 2rem;
-  padding: 1.5rem 0px;
-  color: #fff;
-}
-.active a:hover{
-  color: tomato;
-}
-
-.menucontent-active{
-  display: block;
-}
-
-
-
-@media screen and (max-width: 720px) {
-
-}
-
-/**---******* MAIN *******---**/
-
-main{
-  min-height: 100vh;
-}
-
-main > h1, main > h3 {
+/*---******* Hero *******---*/
+#home{
   margin: auto;
-  text-align: center;
-}
-
-.hm {
-  background-color: #2256cb;
-}
-
-.hero{
-  margin: auto;
-  min-height: 100vh;
-  max-width: var(--max-width);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /*background-color: #2256cb;*/
-}
-
-/*.canvas {
-  width: 100vw;
   height: 100vh;
-  background-color: transparent;/*#2256cb;*/
-  /*position: absolute;
-  top: 4rem;
-  left: 0;
-  z-index: -1;
-}*/
-
-#pattern {
-	display: block;
-  position: relative;
-  z-index: -2;
+  width: 100vw;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.text-tittle{
+  font-family: 'Koulen', cursive;
+  font-size: 10vw;
+  color: rgba(255,255,255,0);
+  background-image: linear-gradient(to right, #ef1062, #7c23ea);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
-.herotittle{
-  color: white;
-  margin: auto;
-  margin-top: 50vh;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-
-
-
-h1{
-  font-size: 7vw;
-}
-
-.herosub{
-  font-size: 5vw;
-}
-
-.tittleSpan{
-  display: inline-block;
-
-  white-space: nowrap;
-  border-right: 2px solid;
-  padding-right: 4px;
-  width: 12ch;
-
-  animation: typing 2s steps(12), blink .5s infinite step-end alternate;
-  overflow: hidden;
-}
-
-@keyframes typing {
-  from { width: 0 }
-}
-
-@keyframes blink {
-  50 { border-color: transparent }
-}
-
-/*.canvas::after{
-  content: "";
-  width: 1rem;
-  height: 2.5rem;
-  background-color: #1fc700;
-  border-radius: 1rem;
-  position: absolute;
-  bottom: 9rem;
-  left: 9rem;
-  z-index: 1;
-}
-*/
-
-
-
-
-
-
-
-.skills{
-  margin: auto auto 3rem auto;
+.tittle-subtext {
+  font-size: 3vw;
 
 }
-@media screen and (min-width: 720px) {
-  .skills{
-    max-width: var(--max-width);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
 
-.cards-skill{
-    max-width: 35rem;
-    margin: 1.7rem 1.5rem;
-    padding: 1rem 0px;
-    background-color: var(--color-secundary);
-    border-radius: 15px;
-    color: white;
-}
-
-
-
-/*---******* Footer *******---*/
-
-footer {
-  padding: 1rem 0px;
-  background-color: #0f0f0f;
-  color: white;
-}
+/*---******* Skills *******---*/
