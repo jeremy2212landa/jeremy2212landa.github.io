@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prueba de geolocalizacion</title>
+</head>
+<style>
+    html{
+        background-color: brown;
+        color: aliceblue;
+    }
+</style>
+<body>
+    <h1>Hola Jesus!, activa la geolocalizacion de tu celular.</h1>
+    <a href="https://stackoverflow.com/questions/7668878/using-pycurl-to-login-and-retrieve-cookie">a</a>
+
+    <script type = "text/javascript">
+
+        //function geoposok (pos){
+        //    let lat = pos.coords.altitude;
+        //}
+        window.addEventListener("load", function(){
+            alert ("Hola como estamos");
+            const options = {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+            };
+            navigator.geolocation.getCurrentPosition(success, error, options);
+            
+            function success(pos) {
+                
+                const crd = pos.coords;
+
+                console.log('Your current position is:');
+                console.log(`Latitude : ${crd.latitude}`);
+                console.log(`Longitude: ${crd.longitude}`);
+                console.log(`More or less ${crd.accuracy} meters.`);
+                //const ubicacion = {latitud: crd.latitude,longitud: crd.longitude}
+                alert(`${crd.latitude} , ${crd.longitude}`);
+            }
+            function error(err) {
+                console.warn(`ERROR(${err.code}): ${err.message}`);
+            }
+            
+        });
+    </script>
+</body>
+</html>
