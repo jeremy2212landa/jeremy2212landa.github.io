@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasa de Mortalidad</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 100px;
+            background-color: #3187cc;
+        }
+        #map {
+            height:70vh;
+            width: 80vw;}
+        .titulo {
+            width: 100hw;
+            text-align: center;
+            font-size: xx-large;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+        }
+    </style>
+</head>
+<body>
+    <div class="titulo">Tasa de Mortalidad ( RCI )</div>
+    <hr>
+    <div id="map"></div>
+    <script>
+    var Esri_WorldGrayCanvas = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+        maxZoom: 16
+    });
+    var Stadia_StamenTonerLines = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_lines/{z}/{x}/{y}{r}.{ext}', {
+        minZoom: 0,
+        maxZoom: 20,
+        attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        ext: 'png'
+    });
+    
+    let map = L.map('map').setView([7.144314400335615, -66.4188718452999],6.4999999999)
+    Esri_WorldGrayCanvas.addTo(map);
+    Stadia_StamenTonerLines.addTo(map);
+    
+    let marker = L.marker([10.358566406886919, -67.03914001338165]).addTo(map)
+    
+    L.marker([9.194130946409281, -69.79303887641656]).addTo(map)
+    // 
+    // 
+    // 
+    L.marker([3.935291331157524, -65.41687841342443]).addTo(map)
+    L.marker([4.6559455946053845, -64.44695342860483]).addTo(map)
+    L.marker([5.489458666477227, -64.75124361992079]).addTo(map)
+    L.marker([5.527319293789334, -63.9524818677164]).addTo(map)
+    L.marker([6.964080110829036, -64.52302597643381]).addTo(map)
+    L.marker([6.019281197517294, -62.697284828538116]).addTo(map)
+    L.marker([5.7355090325027644, -66.462875946073]).addTo(map)
+    L.marker([4.864423405326033, -66.13956761779981]).addTo(map)
+    L.marker([4.807572105807257, -66.63403917868823]).addTo(map)
+    L.marker([4.485326751915561, -64.86535244166426]).addTo(map)
+    L.marker([8.979248713516673, -63.914445593801915]).addTo(map)
+    L.marker([7.944652801300168, -61.61325102197503]).addTo(map)
+    L.marker([7.737409345835589, -60.28198143496775]).addTo(map)
+    L.marker([10.534870673071998, -72.47260722456303]).addTo(map)
+    </script>
+</body>
+</html>
