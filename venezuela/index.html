@@ -40,6 +40,12 @@
         attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
         maxZoom: 16
     });
+        
+    var Esri_NatGeoWorldMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+	maxZoom: 16
+    });
+    
     var Stadia_StamenTonerLines = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_lines/{z}/{x}/{y}{r}.{ext}', {
         minZoom: 0,
         maxZoom: 20,
@@ -48,8 +54,8 @@
     });
     
     let map = L.map('map').setView([7.144314400335615, -66.4188718452999],6.4999999999)
-    Esri_WorldGrayCanvas.addTo(map);
-    Stadia_StamenTonerLines.addTo(map);
+    Esri_NatGeoWorldMap.addTo(map);
+    Stadia_StamenTonerLine.addTo(map);
     
     let marker = L.marker([10.358566406886919, -67.03914001338165]).addTo(map)
     
