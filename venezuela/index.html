@@ -19,6 +19,14 @@
             margin: 10px 100px 100px 100px;
             background-color: #3187cc;
         }
+        h1 {
+            margin: 10px;
+            text-align: center;
+        }
+        h3 {
+            text-align: center;
+            margin: 0px;
+        }
         #map {
             height:70vh;
             width: 80vw;}
@@ -46,8 +54,12 @@
             100% {fill: #DEE50A;}
         }
 
+        .padresito {
+            width: 300px;
+        }
+
         #mapita {
-            width: 100%;
+            width: 300px;
             height: auto;
             margin: auto;
             fill: green;
@@ -101,14 +113,38 @@
             max-width: 1000px;
             width: 100%;
         }
+        .colirio{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
         
 
     </style>
 </head>
 <body>
-    <div class="titulo">Ejemplos Tasa de Mortalidad [ R&C ]</div>
-    <hr>
+    <h1>Tasa de Mortalidad por Estado</h1>
+    <h3>COFEBOPOJUPEV</h3>
     <br/>
+    <div class="colirio">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 120 100">
+        <rect x="10" y="10" width="100" height="80" rx="20" ry="20" fill="green" />
+    </svg>
+    <span>No hubo muertes</span>
+</div>
+    <div class="colirio">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 120 100">
+            <rect x="10" y="10" width="100" height="80" rx="20" ry="20" fill="#DEE50A" />
+        </svg>
+        <span>Varias muertes</span>
+    </div>
+    <div class="colirio">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 120 100">
+            <rect x="10" y="10" width="100" height="80" rx="20" ry="20" fill="#DE3C18" />
+        </svg>
+        <span>Muchas muertes</span>
+    </div>
+    
     <div class="padresito">
         <svg baseprofile="tiny" fill="#6f9c76" height="auto" width="100%" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" version="1.2" viewbox="0 0 1000 877"  xmlns="http://www.w3.org/2000/svg">
             <g id="mapita">
