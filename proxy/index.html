@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <title>Jeremy Landa portfolio concept</title>
+    
+    <link rel="icon" type="image/x-icon" href="./app/assets/landatech.png">
+
+    <link rel="stylesheet" href="./app/assets/css/main.css">
+  </head>
+
+  <body>
+    <h1>Parámetros GET de la URL</h1>
+    <ul id="parametros-lista"></ul>
+
+    <script>
+        // Obtener los parámetros GET de la URL
+        const params = new URLSearchParams(window.location.search);
+
+        // Seleccionar el elemento donde se mostrarán los parámetros
+        const lista = document.getElementById('parametros-lista');
+
+        // Iterar sobre los parámetros y mostrarlos en la lista
+        params.forEach((value, key) => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${key}: ${value}`;
+            lista.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
